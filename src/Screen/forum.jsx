@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles/forum.css';
 import SocialCard from '../Components/PostRender';
+import Sidebar from '../Components/ForumSideBar';
 
 
 const Forum = () => {
@@ -35,7 +36,7 @@ const Forum = () => {
           <h3>Categories</h3>
           
         </div> */}
-        
+        <Sidebar />
       </div>
 
       {/* Message bar */}
