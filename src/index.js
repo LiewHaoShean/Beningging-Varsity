@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './App';
-import Forum from './Screen/forum';
+// import Forum from './Screen/forum';
+import ForumAccount from './Screen/accountDashboard';
+// import ForumAccountContent from './Screen/accountDashboardContent';
 
 
 
@@ -10,7 +12,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Forum />
+    {/* <ForumAccountContent /> */}
+    {/* <Forum /> */}
+    <ForumAccount />
+
   </React.StrictMode>
 );
 
