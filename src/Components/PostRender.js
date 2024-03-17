@@ -19,7 +19,9 @@ function SocialCard() {
           </div>
 
           <div className="userDetails">
+            <a href="/#">
             <span className="user-name">Robert Kiyosaki (UP)</span>
+            </a>
             <span className="post-time"></span>
           </div>
 

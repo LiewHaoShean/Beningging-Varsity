@@ -27,6 +27,11 @@
     padding-left:20px;
     flex-grow: 1;
 }
+
+.userDetails a{
+    text-decoration: none;
+    color: #333;
+}
   
 .userName {
     font-weight: bold;
