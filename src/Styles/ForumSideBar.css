@@ -1,5 +1,5 @@
 .Sidebar {
-    width: 250px; /* Adjust width as needed */
+    width: 300px; /* Adjust width as needed */
     background-color: #f9f9f9;
     border-left: 1px solid #d9d2d2;
     padding: 20px;
@@ -16,6 +16,7 @@
   }
   
   .SidebarContent {
+    
     display: flex;
     flex-direction: column;
   }
@@ -36,6 +37,11 @@
     font-size: 0.8rem;
     color: #666;
   }
-  
+
+  .TopicName a:hover {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+  }
   /* You might want to add additional styling for hover effects, font sizes, etc. */
   

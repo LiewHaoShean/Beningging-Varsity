@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles/forum.css';
 import SocialCard from '../Components/PostRender';
+import Sidebar from '../Components/ForumSideBar';
 
 
 const Forum = () => {
@@ -35,12 +36,16 @@ const Forum = () => {
           <h3>Categories</h3>
           
         </div> */}
-        
+        <Sidebar />
       </div>
 
       {/* Message bar */}
 
       <div className="MessageSidebar">
+        <div className="StockRender">
+            <img src="/giphy.gif" alt="Description of the GIF" />
+            <img src="/giphySilver.gif" alt="Description of the GIF" />
+        </div>
        
         
       </div>

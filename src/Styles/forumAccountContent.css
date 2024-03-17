@@ -1,0 +1,27 @@
+.optionBar{
+    border-bottom: #000000 solid 1px;
+    display: flex;
+    gap:200px;
+    align-items: center;
+    height: 50px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: 30%;
+    padding-right: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+button {
+    padding: 0.5em; /* Sets padding around the image based on font size */
+    border: none; /* Removes default border */
+    background-color: transparent; /* Sets a transparent background */
+    cursor: pointer; /* Changes cursor to indicate button functionality */
+}
+
+button img {
+    height: 20px; /* Sets image size relative to current font size */
+    width: 20px; /* Sets image size relative to current font size */
+    display: block; /* Ensures the image doesn't have extra space below */
+}

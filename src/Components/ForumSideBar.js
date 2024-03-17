@@ -9,7 +9,8 @@ function Sidebar() {
     { name: 'State Management', date: 'Mar 9, 2024', comments: 10 },
     { name: 'Component Lifecycles', date: 'Mar 8, 2024', comments: 8 },
     { name: 'Hooks in Depth', date: 'Mar 7, 2024', comments: 20 },
-    { name: 'Advanced Patterns', date: 'Mar 6, 2024', comments: 5 }
+    { name: 'Advanced Patterns', date: 'Mar 6, 2024', comments: 5 },
+    { name: 'State Management', date: 'Mar 9, 2024', comments: 10, url: 'https://youtube.com/statemanagement' }
   ];
 
   return (
@@ -20,7 +21,9 @@ function Sidebar() {
       <div className="SidebarContent">
         {topics.map((topic, index) => (
           <div key={index} className="SidebarItem">
-            <div className="TopicName">{topic.name}</div>
+            
+            <div className="TopicName"><a href="https://youtube.com">{topic.name}</a></div>
+      
             <div className="TopicInfo">
               <span className="TopicDate">{topic.date}</span>
               <span className="TopicComments">{topic.comments} comments</span>
