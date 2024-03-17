@@ -42,6 +42,10 @@ const Forum = () => {
       {/* Message bar */}
 
       <div className="MessageSidebar">
+        <div className="StockRender">
+            <img src="/giphy.gif" alt="Description of the GIF" />
+            <img src="/giphySilver.gif" alt="Description of the GIF" />
+        </div>
        
         
       </div>
