@@ -13,6 +13,7 @@ import CourseDetailsScreen from "./screens/CourseDetailsScreen.jsx";
 import Forum from './Screen/forum';
 import Sidebar from './Components/ForumSideBar';
 import ForumAccount from './Screen/accountDashboard';
+import Home from './Screen/Home';
 
 
 
@@ -22,6 +23,8 @@ const router = createBrowserRouter(
       <Route path="" element={<App />}>
         <Route path="/" index={true} element={<CourseScreen />} />
         <Route path="/course/:id" element={<CourseDetailsScreen />} />
+        <Route path="/forum" element={<Forum />} />
+        <Route path="/home" element={<Home />} />
       </Route>
     </Route>
   )
