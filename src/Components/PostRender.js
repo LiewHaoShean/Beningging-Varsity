@@ -1,10 +1,10 @@
 import React from 'react';
 import '../Styles/contentRender.css'; // Ensure to create a CSS file with this name
+import ForumAccount from './accountDashboard';
 
 
 
 function SocialCard() {
-  
 
   return (
     <div>
@@ -19,9 +19,9 @@ function SocialCard() {
           </div>
 
           <div className="userDetails">
-            <a href="/#">
-            <span className="user-name">Robert Kiyosaki (UP)</span>
-            </a>
+            
+            <span className="user-name" onclick={ForumAccount}>Robert Kiyosaki (UP)</span>
+            
             <span className="post-time"></span>
           </div>
 

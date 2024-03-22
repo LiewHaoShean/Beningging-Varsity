@@ -1,13 +1,14 @@
 import React from 'react';
 import '../Styles/forumAccount.css';
 import ForumAccountContent from './accountDashboardContent';
-
+import Forum from './forum';
 
 
 const ForumAccount = () => {
 
     return(
         <div>
+            <div onclick={Forum}>return</div> 
             <div className="PageHeader">
 
 
