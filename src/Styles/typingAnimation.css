@@ -1,0 +1,51 @@
+.animated-text{
+    min-width: 280px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "Fund";
+    color: #ff7f50;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: black;
+    border-left: 2px solid #ff7f50;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+      to {
+        border-left: 2px solid black;
+      }
+}
+
+@keyframes words {
+    0%,33% {
+        content: "Fund";
+    }
+    34%,67% {
+        content: "Sponsorship";
+    }
+    67%,100% {
+        content: "Funding";
+    }
+}
+
+@keyframes typing {
+      10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+        width: 0;
+    }
+      5%,20%,25%,40%,45%,60%,65%,80%,85% {
+        width: calc(100% + 8px);
+    }
+}
