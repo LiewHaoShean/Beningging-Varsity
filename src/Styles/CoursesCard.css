@@ -1,0 +1,110 @@
+.courses-section {
+    padding: 20px;
+    background: #f0f4fc;
+  }
+  
+  .courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-right: 10px; /* To ensure padding within the section */
+  }
+  
+  .courses-header h2 {
+    font-size: 2em;
+    color: #505D58;
+    white-space: nowrap; /* Prevent the title from wrapping */
+    
+  }
+  
+  .courses-header .show-more {
+    min-width: 120px; /* Set a minimum width for the button */
+    background-color: #4cbcbc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent the button text from wrapping */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .courses-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .course-card {
+    flex: 0 0 250px; /* Flex basis set to 250px but can shrink and grow */
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 5px solid #4cbcbc; /* Color stripe at the bottom of the image */
+  }
+  
+  .card-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card-info h3 {
+    color: #505D58;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+  }
+  
+  .card-info p {
+    color: #969F95;
+    font-size: 1em;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+  }
+  
+.card-info button {
+  display: flex; /* Use flexbox to center content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  background-color: #4cbcbc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Uniform padding for equal space around the text */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+  
+  .card-info button:hover {
+    background-color: #3da6a6;
+  }
+  
+  @media (min-width: 768px) {
+    .courses-header {
+      padding-right: 0; /* Remove the padding-right on larger screens */
+    }
+  
+    .course-card {
+      flex: 1; /* Allow cards to grow and fill the space */
+      max-width: 300px; /* Maximum width of the card */
+    }
+  }
+  
