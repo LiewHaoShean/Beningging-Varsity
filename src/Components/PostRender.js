@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/contentRender.css'; // Ensure to create a CSS file with this name
-import ForumAccount from './accountDashboard';
+import ForumAccount from '../Screen/accountDashboard';
 
 
 
