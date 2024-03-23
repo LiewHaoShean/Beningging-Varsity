@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <h3>Logo</h3>
+      <div className="NavBarLogo"><img src="/CacingNavBarLogo.png" alt="Logo" /></div>
       <nav ref={navRef}>
         <a href="/">Home</a>
         <a href="/course">Course</a>
