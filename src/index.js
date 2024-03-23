@@ -10,6 +10,8 @@ import App from "./App";
 import "./index.css";
 import CourseScreen from "./screens/CourseScreen.jsx";
 import CourseDetailsScreen from "./screens/CourseDetailsScreen.jsx";
+import CourseVideoScreen from "./screens/CourseVideoScreen.jsx";
+import CourseShorts from "./screens/CourseShortsScreen.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +19,8 @@ const router = createBrowserRouter(
       <Route path="" element={<App />}>
         <Route path="/" index={true} element={<CourseScreen />} />
         <Route path="/course/:id" element={<CourseDetailsScreen />} />
+        <Route path="/course/:id/video" element={<CourseVideoScreen />} />
+        <Route path="/course/:id/shorts" element={<CourseShorts />} />
       </Route>
     </Route>
   )

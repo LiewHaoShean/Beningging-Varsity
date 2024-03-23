@@ -10,6 +10,8 @@ import { IoMdTime } from "react-icons/io";
 import { IoPeopleSharp } from "react-icons/io5";
 import { MdOndemandVideo } from "react-icons/md";
 import ReactPlayer from "react-player";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const CourseDetailsScreen = () => {
   const preview = require("../assets/thumbnail.png");
@@ -17,6 +19,28 @@ const CourseDetailsScreen = () => {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
+  const [coupon, setCoupon] = useState("");
+  const [price, setPrice] = useState("93.90");
+  const navigate = useNavigate();
+
+  const applyCoupon = (value, newPrice) => {
+    setCoupon(value);
+    setPrice(newPrice);
+  };
+
+  async function onApprove() {
+    toast.success("Payment successful", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    navigate("/");
+  }
 
   return (
     <div className="relative h-screen">
@@ -266,7 +290,7 @@ const CourseDetailsScreen = () => {
 
           <div className="my-10">
             <div className="font-bold text-2xl mb-4">Course Review</div>
-            <div className="flex flex-row items-center">
+            <div className="flex flex-row items-center space-x-6">
               <div>
                 <p className="font-bold text-lg">Charles Hor</p>
                 <div className="flex flex-row items-center my-2">
@@ -276,11 +300,31 @@ const CourseDetailsScreen = () => {
                   <FaStar className="text-[#FED000]" />
                   <FaRegStar className="text-[#FED000]" />
                 </div>
+                <div className="font-base text-base mt-4">
+                  Good foundation for investing in stocks. Takes you from
+                  beginning through the analysis and how to find stocks and
+                  funds to consider investing in.
+                </div>
+              </div>
+              <div className="pb-1">
+                <p className="font-bold text-lg">Hao Shean</p>
+                <div className="flex flex-row items-center my-2">
+                  <FaStar className="text-[#FED000]" />
+                  <FaStar className="text-[#FED000]" />
+                  <FaStar className="text-[#FED000]" />
+                  <FaStar className="text-[#FED000]" />
+                  <FaStar className="text-[#FED000]" />
+                </div>
+                <div className="font-base text-base mt-4">
+                  Good foundation for investing in stocks. Takes you from
+                  beginning through the analysis and how to find stocks and
+                  funds to consider investing in.
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="w-1/3 h-[28rem] shadow-md">
+        <div className="w-1/3 h-[24rem] shadow-md">
           <div className="relative flex flex-col justify-center items-center w-full h-[11rem]">
             <ReactPlayer
               url={video}
@@ -299,35 +343,50 @@ const CourseDetailsScreen = () => {
             />
           </div>
           <div className="bg-white w-full p-6 shadow-md">
-            <div className="font-bold text-3xl">RM93.90</div>
-            <button className="p-3 mt-3 rounded-md w-full  font-bold hover:bg-[#F5F5F5] active:bg-zinc-400 border-black border-2">
+            <div
+              className={`font-bold text-3xl ${
+                coupon !== "" ? "text-red-500" : ""
+              }`}
+            >
+              RM{price}
+            </div>
+            <div className="flex flex-row items-center justify-start mt-3 my-2">
+              <FaRegLightbulb className="text-[#FED000] mr-2 font-medium" />
+              <div className="ml-2">
+                Buy now and complete it to get{" "}
+                <span className="text-[#FF5607] font-bold">10% OFF</span>{" "}
+                voucher for next course !
+              </div>
+            </div>
+            <div className="flex flex-row items-center mb-1">
+              <input
+                className="p-3 mt-3 rounded-sm w-2/3 border-black border-2 leading-tight focus:outline-none"
+                type="text"
+                placeholder="Enter your voucher code here"
+              />
+              <button
+                className="p-2.5 mt-3 rounded-sm w-1/3 border-black border-2 border-l-0 font-semibold hover:bg-[#F5F5F5] active:bg-zinc-400"
+                onClick={() =>
+                  applyCoupon(
+                    document.querySelector('input[type="text"]').value,
+                    price * 0.9
+                  )
+                }
+              >
+                Apply
+              </button>
+            </div>
+            {coupon !== "" && (
+              <div className="text-sm text-red-500">
+                Voucher <span className="font-bold">{coupon}</span> is applied
+              </div>
+            )}
+            <button
+              className="p-3 mt-3 rounded-md w-full  font-bold hover:bg-[#F5F5F5] active:bg-zinc-400 border-black border-2"
+              onClick={onApprove}
+            >
               Buy Now
             </button>
-            <button className="p-3 mt-2 bg-zinc-500 rounded-md w-full text-white font-bold hover:bg-zinc-600 active:bg-zinc-400">
-              Join Sprint Class
-            </button>
-            <div className="flex flex-row items-center justify-start my-2">
-              <FaRegLightbulb className="text-[#FED000] mr-2 font-medium" />
-              What is Sprint Class?
-            </div>
-            <div>
-              <span className="text-[#FF5607] font-bold mr-1">
-                100% Cashback
-              </span>
-              when you completed in 30 days
-            </div>
-            <div>
-              <span className="text-[#FF5607] font-bold mr-2">
-                50% Cashback
-              </span>
-              when you completed in 45 days
-            </div>
-            <div>
-              <span className="text-[#FF5607] font-bold mr-2">
-                30% Cashback
-              </span>
-              when you completed in 60 days
-            </div>
           </div>
         </div>
       </div>
