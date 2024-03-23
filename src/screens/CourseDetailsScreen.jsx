@@ -11,6 +11,7 @@ import { IoPeopleSharp } from "react-icons/io5";
 import { MdOndemandVideo } from "react-icons/md";
 import ReactPlayer from "react-player";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const CourseDetailsScreen = () => {
@@ -107,7 +108,7 @@ const CourseDetailsScreen = () => {
               <p>10 hours and 45 minutes</p>
             </div>
             <div>
-              <button
+              <div
                 onClick={() => setIsOpen1(!isOpen1)}
                 className="bg-[#F5F5F5] p-4 w-full items-center flex justify-between font-bold text-base rounded-md tracking-wide border-2 border-grey active:border-black duration-100 ease-linear"
               >
@@ -117,18 +118,18 @@ const CourseDetailsScreen = () => {
                 ) : (
                   <FaCaretUp className="h-6" />
                 )}
-              </button>
+              </div>
             </div>
             {isOpen1 && (
               <div className="flex flex-col items-start border-2 border-t-0 first-line:border-grey rounded-md p-4 w-full space-y-2">
                 <div>
-                  <a
-                    href="#"
+                  <Link
+                    to="/course/2/video"
                     className="text-[#2565AE] underline text-sm flex flex-row justify-center items-center"
                   >
                     <MdOndemandVideo className="mr-4 text-black" />
                     Welcome to the course
-                  </a>
+                  </Link>
                 </div>
                 <a
                   href="#"
@@ -151,7 +152,7 @@ const CourseDetailsScreen = () => {
               </div>
             )}
             <div>
-              <button
+              <div
                 onClick={() => setIsOpen2(!isOpen2)}
                 className="bg-[#F5F5F5] p-4 w-full items-center flex justify-between font-bold text-base rounded-md tracking-wide border-2 border-grey active:border-black duration-100 ease-linear"
               >
@@ -161,7 +162,7 @@ const CourseDetailsScreen = () => {
                 ) : (
                   <FaCaretUp className="h-6" />
                 )}
-              </button>
+              </div>
             </div>
             {isOpen2 && (
               <div className="flex flex-col items-start border-2 border-t-0 first-line:border-grey rounded-md p-4 w-full space-y-2">
@@ -196,7 +197,7 @@ const CourseDetailsScreen = () => {
               </div>
             )}
             <div>
-              <button
+              <div
                 onClick={() => setIsOpen3(!isOpen3)}
                 className="bg-[#F5F5F5] p-4 w-full items-center flex justify-between font-bold text-base rounded-md tracking-wide border-2 border-grey active:border-black duration-100 ease-linear"
               >
@@ -206,7 +207,7 @@ const CourseDetailsScreen = () => {
                 ) : (
                   <FaCaretUp className="h-6" />
                 )}
-              </button>
+              </div>
             </div>
             {isOpen3 && (
               <div className="flex flex-col items-start border-2 border-t-0 first-line:border-grey rounded-md p-4 w-full space-y-2">
@@ -364,8 +365,8 @@ const CourseDetailsScreen = () => {
                 type="text"
                 placeholder="Enter your voucher code here"
               />
-              <button
-                className="p-2.5 mt-3 rounded-sm w-1/3 border-black border-2 border-l-0 font-semibold hover:bg-[#F5F5F5] active:bg-zinc-400"
+              <div
+                className="text-center p-2.5 mt-3 rounded-sm w-1/3 border-black border-2 border-l-0 font-semibold hover:bg-[#F5F5F5] active:bg-zinc-400"
                 onClick={() =>
                   applyCoupon(
                     document.querySelector('input[type="text"]').value,
@@ -374,19 +375,19 @@ const CourseDetailsScreen = () => {
                 }
               >
                 Apply
-              </button>
+              </div>
             </div>
             {coupon !== "" && (
               <div className="text-sm text-red-500">
                 Voucher <span className="font-bold">{coupon}</span> is applied
               </div>
             )}
-            <button
-              className="p-3 mt-3 rounded-md w-full  font-bold hover:bg-[#F5F5F5] active:bg-zinc-400 border-black border-2"
+            <div
+              className="p-3 mt-3 rounded-md w-full font-bold hover:bg-[#F5F5F5] active:bg-zinc-400 border-black border-2 text-center"
               onClick={onApprove}
             >
               Buy Now
-            </button>
+            </div>
           </div>
         </div>
       </div>

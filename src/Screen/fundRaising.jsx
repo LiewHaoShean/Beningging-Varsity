@@ -6,15 +6,12 @@ import FundHeader from "../Components/FundHeader";
 import FundContent from "../Components/FundContent";
 import FundCrowding from "../Components/FundCrowding";
 
-
 function FundRaising() {
   return (
     <React.Fragment>
-      <Navbar></Navbar>
       <FundHeader></FundHeader>
       <FundContent></FundContent>
       <FundCrowding></FundCrowding>
-      <Footer></Footer>
     </React.Fragment>
   );
 }
