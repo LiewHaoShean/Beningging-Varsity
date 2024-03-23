@@ -1,22 +1,22 @@
-import React from 'react';
-import '../Styles/CoursesCard.css';
-import investing101 from '../assets/Investing101.webp'; 
-import DebtFree from '../assets/DebtFree.jpg'; 
-
+import React from "react";
+import "../Styles/CoursesCard.css";
+import investing101 from "../assets/Investing101.webp";
+import DebtFree from "../assets/DebtFree.jpg";
+import { Link } from "react-router-dom";
 
 function CoursesCard() {
   // This array should be populated with actual degree information
   const degrees = [
     {
-      university: "Investing 101: Building Wealth for the Future",
+      university: "Investing in Stocks The Complete Course!(17+Hours)",
       program: "Cikgu Hor",
-      imageSrc: investing101, 
+      imageSrc: investing101,
     },
     {
-        university: "Debt-Free Journey: Strategies to Eliminate Debt",
-        program: "Cikgu Hor",
-        imageSrc: DebtFree, 
-      }
+      university: "Debt-Free Journey: Strategies to Eliminate Debt",
+      program: "Cikgu Hor",
+      imageSrc: DebtFree,
+    },
     // ... add more degree objects as needed
   ];
 
@@ -35,8 +35,9 @@ function CoursesCard() {
             <div className="card-info">
               <h3>{degree.university}</h3>
               <p>{degree.program}</p>
-              <button >Continue</button>
-              
+              <Link className="button" to="/course/1/video">
+                Continue
+              </Link>
             </div>
           </div>
         ))}

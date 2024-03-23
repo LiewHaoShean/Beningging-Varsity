@@ -19,12 +19,12 @@ const CourseVideoScreen = () => {
         <p className="font-bold text-lg">{name}</p>
         <p className="mt-2">{content}</p>
         {replies && (
-          <button
+          <div
             className="text-blue-600 mt-2"
             onClick={() => setShowReplies(!showReplies)}
           >
             {showReplies ? "Hide replies" : `View ${replies.length} replies`}
-          </button>
+          </div>
         )}
         {showReplies &&
           replies.map((reply, index) => (
@@ -89,7 +89,7 @@ const CourseVideoScreen = () => {
         <div className="w-1/10 pt-3 bg-white border-t-2 ">
           <div className="font-bold text-xl mb-2 pl-4">Course Content</div>
           <div className="items-start">
-            <button
+            <div
               onClick={() => setIsOpen1(!isOpen1)}
               className="bg-[#F5F5F5] py-3 pl-3 pr-5 w-full items-start flex justify-start font-bold text-base rounded-md tracking-wide border-2 border-grey active:border-black duration-100 ease-linear"
             >
@@ -99,7 +99,7 @@ const CourseVideoScreen = () => {
               ) : (
                 <FaCaretUp className="h-6 pl-1" />
               )}
-            </button>
+            </div>
           </div>
           {isOpen1 && (
             <div className="flex flex-col items-start border-2 border-t-0 first-line:border-grey rounded-md p-4 w-full space-y-2">
@@ -136,7 +136,7 @@ const CourseVideoScreen = () => {
             </div>
           )}
           <div>
-            <button
+            <div
               onClick={() => setIsOpen2(!isOpen2)}
               className="bg-[#F5F5F5] p-3 w-full items-center flex justify-between font-bold text-base rounded-md tracking-wide border-2 border-grey active:border-black duration-100 ease-linear"
             >
@@ -146,7 +146,7 @@ const CourseVideoScreen = () => {
               ) : (
                 <FaCaretUp className="h-6 pl-1" />
               )}
-            </button>
+            </div>
           </div>
           {isOpen2 && (
             <div className="flex flex-col items-start border-2 border-t-0 first-line:border-grey rounded-md p-4 w-full space-y-2">
@@ -181,7 +181,7 @@ const CourseVideoScreen = () => {
             </div>
           )}
           <div>
-            <button
+            <div
               onClick={() => setIsOpen3(!isOpen3)}
               className="bg-[#F5F5F5] p-3 w-full items-center flex justify-between font-bold text-base rounded-md tracking-wide border-2 border-grey active:border-black duration-100 ease-linear"
             >
@@ -191,7 +191,7 @@ const CourseVideoScreen = () => {
               ) : (
                 <FaCaretUp className="h-6 pl-1" />
               )}
-            </button>
+            </div>
           </div>
           {isOpen3 && (
             <div className="flex flex-col items-start border-2 border-t-0 first-line:border-grey rounded-md p-4 w-full space-y-2">
