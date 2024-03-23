@@ -11,11 +11,9 @@ import "./index.css";
 import CourseScreen from "./screens/CourseScreen.jsx";
 import CourseDetailsScreen from "./screens/CourseDetailsScreen.jsx";
 import Forum from './Screen/forum';
-import Sidebar from './Components/ForumSideBar';
-import ForumAccount from './Screen/accountDashboard';
 import Home from './Screen/Home';
-
-
+import CourseVideoScreen from "./screens/CourseVideoScreen.jsx";
+import CourseShorts from "./screens/CourseShortsScreen.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +21,8 @@ const router = createBrowserRouter(
       <Route path="" element={<App />}>
         <Route path="/" index={true} element={<CourseScreen />} />
         <Route path="/course/:id" element={<CourseDetailsScreen />} />
+        <Route path="/course/:id/video" element={<CourseVideoScreen />} />
+        <Route path="/course/:id/shorts" element={<CourseShorts />} />
         <Route path="/forum" element={<Forum />} />
         <Route path="/home" element={<Home />} />
       </Route>
