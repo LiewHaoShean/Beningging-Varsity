@@ -1,25 +1,25 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
-import HeadTitle from "./Components/HeadTitle";
-import "./index.css";
-import CourseContent from "./Components/CourseContent";
-import SearchBar from "./Components/SearchBar";
-import Footer from "./Components/Footer";
-import PageNavigator from "./Components/PageNavigator";
-import SponserShip from "./Components/SponsershipSlot";
+import Navbar from "../Components/Navbar";
+import HeadTitle from "../Components/HeadTitle";
+import "../index.css";
+import SearchBar from "../Components/SearchBar";
+import Footer from "../Components/Footer";
+import PageNavigator from "../Components/PageNavigator";
+import SponserShip from "../Components/SponsershipSlot";
+import CourseContent from "../Components/CourseContent2";
 
-function App() {
+function Course() {
   return (
     <React.Fragment>
       <Navbar></Navbar>
       <HeadTitle></HeadTitle>
+      <SponserShip></SponserShip>
       <SearchBar></SearchBar>
       <CourseContent></CourseContent>
       <PageNavigator></PageNavigator>
-      <SponserShip></SponserShip>
       <Footer></Footer>
     </React.Fragment>
   );
 }
 
-export default App;
+export default Course;
